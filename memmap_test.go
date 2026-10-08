@@ -1152,6 +1152,7 @@ func TestMemMapFsRenameExistingSourceToItself(t *testing.T) {
 		t.Fatalf("file changed after rename: %q, %v", content, err)
 	}
 }
+
 func TestEmptyWritePastEnd(t *testing.T) {
 	for _, fs := range []Fs{NewMemMapFs(), NewOsFs()} {
 		t.Run(fs.Name(), func(t *testing.T) {
